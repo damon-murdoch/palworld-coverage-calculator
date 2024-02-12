@@ -49,124 +49,87 @@
         </nav>
       </div>
     </div>
-    <div id="body" class="container bg-dark rounded overflow-auto my-2 pb-3" style="opacity: 0.8; max-height: 90vh">
-      <div id="title" class="text-light text-center">
-        <div id="body" class="container-fluid">
-          <div class="row">
-            <div
-              id="table-pal-container"
-              class="col overflow-auto container bg-dark rounded ml-2 my-2"
-              style="
+    <div id="body" class="container-fluid">
+      <div class="row">
+        <div id="table-pal-container" class="col overflow-auto container bg-dark rounded ml-2 my-2" style="
                 min-width: 420px;
                 max-width: 22vw;
                 opacity: 0.8;
                 max-height: 90vh;
-              "
-            >
-              <table
-                id="table-pal"
-                class="table table-dark"
-                style="overflow: hidden"
-              >
-                <thead id="pal-control">
-                  <tr>
-                    <th class="text-center" scope="col" colspan="2">
-                      <a class="text-secondary" href="#" onClick="addPal()">
-                        Add Pal
-                      </a>
-                      <a class="text-secondary" id="paste-import" href="#">
-                        Import Sets
-                      </a>
-                      <a class="text-secondary" id="paste-export" href="#">
-                        Export Sets
-                      </a>
-                    </th>
-                  </tr>
-                </thead>
-                <table
-                  id="table-pal-import"
-                  class="table"
-                  style="overflow-y: scroll"
-                ></table>
-                <table
-                  id="table-pal-contents"
-                  class="table"
-                  style="overflow-y: scroll"
-                ></table>
-              </table>
-            </div>
-            <div
-              id="table-coverage-container"
-              class="col m-2 overflow-auto text-center container bg-dark rounded mr-2 my-2"
-              style="max-width: 78vw; opacity: 0.8; max-height: 90vh"
-            >
-              <div id="title" class="text-center">
-                <h2>
-                  Palworld Element Coverage Calculator
-                </h2>
-                <p class="text-secondary">
-                  Offensive & Defensive Element Coverage Calculator
-                </p>
-                <div class="container-fluid">
-                  <p class="text-muted lead">
-                    Developed by
-                    <a class="text-secondary" href="https://twitter.com/SirScrubbington">Damon Murdoch</a>
-                  </p>
-                </div>
-              </div>
-              <table id="table-coverage" class="table table-dark">
-                <!-- Sets if offensive or defensive calcs should be shown -->
-                <thead id="table-selector">
-                  <tr>
-                    <th id="option-defensive" class="" scope="col">
-                      <a
-                        class="text-light"
-                        href="#"
-                        onClick="setTableDefensive()"
-                      >
-                        Defensive
-                      </a>
-                    </th>
-  
-                    <th id="option-offensive" class="" scope="col">
-                      <a
-                        class="text-light"
-                        href="#"
-                        onClick="setTableOffensive()"
-                      >
-                        Offensive
-                      </a>
-                    </th>
-
-                    <th id="option-skills" class="" scope="col">
-                      <a
-                        class="text-light"
-                        href="#"
-                        onClick="setTableSkills()"
-                      >
-                        Skills
-                      </a>
-                    </th>
-  
-                    <!-- Filler Space -->
-                    <th scope="col" colspan="5"></th>
-                  </tr>
-                </thead>
-  
-                <!-- Holds the table row titles -->
-                <thead id="table-header">
-                </thead>
-                <tbody id="table-content">
-
-                </tbody>
-              </table>
+              ">
+          <table id="table-pal" class="table table-dark" style="overflow: hidden">
+            <thead id="pal-control">
+              <tr>
+                <th class="text-center" scope="col" colspan="2">
+                  <a class="text-secondary" href="#" onClick="addPal()">
+                    Add Pal
+                  </a>
+                  <a class="text-secondary" id="paste-import" href="#">
+                    Import Sets
+                  </a>
+                  <a class="text-secondary" id="paste-export" href="#">
+                    Export Sets
+                  </a>
+                </th>
+              </tr>
+            </thead>
+            <tbody id="table-pal-import" style="overflow-y: scroll"></tbody>
+            <tbody id="table-pal-contents" style="overflow-y: scroll"></tbody>
+          </table>
+        </div>
+        <div id="table-coverage-container" class="col m-2 overflow-auto text-center container bg-dark rounded mr-2 my-2"
+          style="max-width: 78vw; opacity: 0.8; max-height: 90vh">
+          <div id="title" class="text-center">
+            <h2 class="text-light">
+              Palworld Coverage Calculator
+            </h2>
+            <p class="text-muted lead">
+              Palworld Element & Work Skill Coverage Calculator
+            </p>
+            <div class="container-fluid">
+              <p class="text-muted lead">
+                Developed by
+                <a class="text-secondary" href="https://twitter.com/SirScrubbington">Damon Murdoch</a>
+              </p>
             </div>
           </div>
-        <div id="foot"></div>
-      </div>
+          <table id="table-coverage" class="table table-dark">
+            <!-- Sets if offensive or defensive calcs should be shown -->
+            <thead id="table-selector">
+              <tr>
+                <th id="option-defensive" class="" scope="col">
+                  <a class="text-light" href="#" onClick="setTableDefensive()">
+                    Defensive
+                  </a>
+                </th>
+
+                <th id="option-offensive" class="" scope="col">
+                  <a class="text-light" href="#" onClick="setTableOffensive()">
+                    Offensive
+                  </a>
+                </th>
+
+                <th id="option-skills" class="" scope="col">
+                  <a class="text-light" href="#" onClick="setTableSkills()">
+                    Skills
+                  </a>
+                </th>
+
+                <!-- Filler Space -->
+                <th scope="col" colspan="5"></th>
+              </tr>
+            </thead>
+
+            <!-- Holds the table row titles -->
+            <thead id="table-header">
+            </thead>
+            <tbody id="table-content">
+
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
-    <div id="foot"></div>
     <div id="script">
       <!-- JavaScript Source -->
 
@@ -176,8 +139,14 @@
       <!-- Species Data -->
       <script src="data/species.js"></script>
 
+      <!-- Colour Data -->
+      <script src="data/colors.js"></script>
+
       <!-- Search Functions -->
       <script src="js/search.js"></script>
+
+      <!-- Map Functions -->
+      <script src="js/map.js"></script>
 
       <!-- Main Application Source Library -->
       <script src="index.js"></script>
