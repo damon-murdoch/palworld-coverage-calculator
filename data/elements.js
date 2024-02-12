@@ -25,18 +25,18 @@ const ELEMENTS = {
 
 // List of Pal Skills
 const SKILLS = [
-  "Cooling",
-  "Electricity",
-  "Farming",
-  "Gathering",
-  "Handiwork",
-  "Kindling",
-  "Lumbering",
-  "Medicine",
-  "Mining",
-  "Planting",
-  "Transporting",
-  "Watering",
+  "cooling",
+  "electricity",
+  "farming",
+  "gathering",
+  "handiwork",
+  "kindling",
+  "lumbering",
+  "medicine",
+  "mining",
+  "planting",
+  "transporting",
+  "watering",
 ]
 
 // Single-Type Functions
