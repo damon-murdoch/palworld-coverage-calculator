@@ -139,6 +139,7 @@ const PALDEX = {
       planting: 1,
     },
   },
+  /*
   "special-flower-gumoss": {
     index: "13B",
     species: "Special Flower Gumoss",
@@ -147,6 +148,7 @@ const PALDEX = {
       planting: 1,
     },
   },
+  */
   vixy: {
     index: 14,
     species: "Vixy",
@@ -561,6 +563,16 @@ const PALDEX = {
       transporting: 3,
     },
   },
+  "gorirat-terra": {
+    index: "49B",
+    species: "Gorirat Terra",
+    element: ["ground"],
+    skills: {
+      handiwork: 1,
+      transporting: 3,
+      mining: 2,
+    },
+  },
   beegarde: {
     index: 50,
     species: "Beegarde",
@@ -620,6 +632,15 @@ const PALDEX = {
     skills: {
       gathering: 1,
       cooling: 1,
+    },
+  },
+  "chillet-ignis": {
+    index: "55B",
+    species: "Chillet Ignis",
+    element: ["fire", "dragon"],
+    skills: {
+      kindling: 2,
+      gathering: 1,
     },
   },
   univolt: {
@@ -814,6 +835,18 @@ const PALDEX = {
       gathering: 1,
     },
   },
+  "bushi-noct": {
+    index: "72B",
+    species: "Bushi Noct",
+    element: ["fire", "dark"],
+    skills: {
+      kindling: 2,
+      handiwork: 1,
+      lumbering: 3,
+      transporting: 2,
+      gathering: 1,
+    },
+  },
   beakon: {
     index: 73,
     species: "Beakon",
@@ -843,10 +876,31 @@ const PALDEX = {
       transporting: 2,
     },
   },
+  "katress-ignis": {
+    index: "75B",
+    species: "Katress Ignis",
+    element: ["fire", "dark"],
+    skills: {
+      kindling: 2,
+      handiwork: 2,
+      medicine_production: 2,
+      transporting: 2,
+    },
+  },
   wixen: {
     index: 76,
     species: "Wixen",
     element: ["fire"],
+    skills: {
+      kindling: 2,
+      handiwork: 3,
+      transporting: 2,
+    },
+  },
+  "wixen-noct": {
+    index: "76B",
+    species: "Wixen Noct",
+    element: ["fire", "dark"],
     skills: {
       kindling: 2,
       handiwork: 3,
@@ -1011,9 +1065,9 @@ const PALDEX = {
       mining: 3,
     },
   },
-  "ice-reptyro": {
+  "reptyro-cryst": {
     index: "88B",
-    species: "Ice Reptyro",
+    species: "Reptyro Cryst",
     element: ["ice", "ground"],
     skills: {
       mining: 3,
@@ -1028,9 +1082,9 @@ const PALDEX = {
       gathering: 1,
     },
   },
-  "ice-kingpaca": {
+  "kingpaca-cryst": {
     index: "89B",
-    species: "Ice Kingpaca",
+    species: "Kingpaca Cryst",
     element: ["ice"],
     skills: {
       gathering: 1,
@@ -1117,10 +1171,31 @@ const PALDEX = {
       mining: 2,
     },
   },
+  "quivern-botan": {
+    index: "95B",
+    species: "Quivern Botan",
+    element: ["grass", "dragon"],
+    skills: {
+      planting: 2,
+      handiwork: 1,
+      transporting: 3,
+      gathering: 2,
+      mining: 2,
+    },
+  },
   blazamut: {
     index: 96,
     species: "Blazamut",
     element: ["fire"],
+    skills: {
+      kindling: 3,
+      mining: 4,
+    },
+  },
+  "blazamut-ryu": {
+    index: "96B",
+    species: "Blazamut Ryu",
+    element: ["fire", "dragon"],
     skills: {
       kindling: 3,
       mining: 4,
@@ -1132,6 +1207,15 @@ const PALDEX = {
     element: ["dark"],
     skills: {
       transporting: 3,
+    },
+  },
+  "helzephyr-lux": {
+    index: "97B",
+    species: "Helzephyr Lux",
+    element: ["electric", "dark"],
+    skills: {
+      transporting: 3,
+      electricity: 3,
     },
   },
   astegon: {
@@ -1147,6 +1231,15 @@ const PALDEX = {
     index: 99,
     species: "Menasting",
     element: ["ground", "dark"],
+    skills: {
+      lumbering: 2,
+      mining: 3,
+    },
+  },
+  "menasting-terra": {
+    index: "99B",
+    species: "Menasting Terra",
+    element: ["ground"],
     skills: {
       lumbering: 2,
       mining: 3,
@@ -1293,6 +1386,173 @@ const PALDEX = {
     element: ["dragon"],
     skills: {
       gathering: 3,
+    },
+  },
+  bellanoir: {
+    index: 112,
+    species: "Bellanoir",
+    element: ["dark"],
+    skills: {
+      handiwork: 2,
+      medicine_production: 4,
+      transporting: 2,
+    },
+  },
+  "bellanoir-libero": {
+    index: "112B",
+    species: "Bellanoir Libero",
+    element: ["dark"],
+    skills: {
+      handiwork: 2,
+      medicine_production: 4,
+      transporting: 2,
+    },
+  },
+  selyne: {
+    index: 113,
+    species: "Selyne",
+    element: ["dark", "neutral"],
+    skills: {
+      handiwork: 3,
+      medicine_production: 3,
+      transporting: 3,
+    },
+  },
+  croajiro: {
+    index: 114,
+    species: "Croajiro",
+    element: ["water"],
+    skills: {
+      handiwork: 1,
+      transporting: 1,
+      watering: 1,
+      gathering: 1,
+    },
+  },
+  lullu: {
+    index: 115,
+    species: "Lullu",
+    element: ["grass"],
+    skills: {
+      planting: 2,
+      handiwork: 2,
+      medicine_production: 2,
+      gathering: 1,
+    },
+  },
+  shroomer: {
+    index: 116,
+    species: "Shroomer",
+    element: ["grass"],
+    skills: {
+      planting: 2,
+      handiwork: 1,
+      lumbering: 2,
+      gathering: 2,
+    },
+  },
+  "shroomer-noct": {
+    index: "116B",
+    species: "Shroomer Noct",
+    element: ["grass", "dark"],
+    skills: {
+      planting: 2,
+      handiwork: 1,
+      lumbering: 2,
+      gathering: 2,
+    },
+  },
+  kikit: {
+    index: 117,
+    species: "Kikit",
+    element: ["ground"],
+    skills: {
+      mining: 1,
+    },
+  },
+  sootseer: {
+    index: 118,
+    species: "Sootseer",
+    element: ["fire", "dark"],
+    skills: {
+      kindling: 3,
+      handiwork: 2,
+      gathering: 1,
+      mining: 2,
+      farming: 1,
+    },
+  },
+  prixter: {
+    index: 119,
+    species: "Prixter",
+    element: ["ground", "dark"],
+    skills: {
+      lumbering: 3,
+      medicine_production: 1,
+      gathering: 1,
+    },
+  },
+  knocklem: {
+    index: 120,
+    species: "Knocklem",
+    element: ["ground"],
+    skills: {
+      transporting: 4,
+      gathering: 3,
+      mining: 3,
+    },
+  },
+  yakumo: {
+    index: 121,
+    species: "Yakumo",
+    element: ["neutral"],
+    skills: {
+      gathering: 2,
+    },
+  },
+  dogen: {
+    index: 122,
+    species: "Dogen",
+    element: ["neutral"],
+    skills: {
+      handiwork: 3,
+      lumbering: 2,
+      medicine_production: 1,
+      transporting: 2,
+      gathering: 2,
+    },
+  },
+  dazemu: {
+    index: 123,
+    species: "Dazemu",
+    element: ["ground"],
+    skills: {
+      gathering: 2,
+    },
+  },
+  mimog: {
+    index: 124,
+    species: "Mimog",
+    element: ["neutral"],
+    skills: {
+      gathering: 1,
+    },
+  },
+  xenovader: {
+    index: 125,
+    species: "Xenovader",
+    element: ["dark"],
+    skills: {
+      lumbering: 2,
+      transporting: 2,
+    },
+  },
+  xenogard: {
+    index: 126,
+    species: "Xenogard",
+    element: ["dragon"],
+    skills: {
+      mining: 3,
     },
   },
 };
