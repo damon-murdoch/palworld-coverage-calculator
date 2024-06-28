@@ -197,9 +197,8 @@ function addPal(set = null) {
   // Set the data row content
   data.innerHTML =
     `<td><img style='width: 64px' id='pal-${id}-sprite' src='img/box/egg.png'></img></td>` +
-    `<td><div>` +
-    `<select id='${speciesId}' class='form-control' name='pal-species-${id}' onChange='update(${id})'></select>` +
-    `<div class='input-group-prepend'><span class="input-group-text">Amount</span>` +
+    `<td><div><div class='input-group-prepend'><select id='${speciesId}' class='form-control' name='pal-species-${id}' onChange='update(${id})'></select>` + 
+    `<span class="input-group-text" id='element-${id}-sprite' ></span></div><div class='input-group-prepend'><span class="input-group-text">Amount</span>` +
     `<input class='form-control' type='number' min='1' max='999' value='1' id='pal-amount-${id}' onChange='update(${id})'>` +
     `</div></div></td>`;
 
@@ -304,7 +303,7 @@ function showActiveSkills(id) {
 // Depending on the current style
 function toggleActiveSkills(id) {
   // Dereference the move control tab
-  let elem = document.getElementById("pal-" + id + "-active-skills");
+  const elem = document.getElementById("pal-" + id + "-active-skills");
 
   // If the element is currently hidden
   if (elem.style.display == "none") {
@@ -336,7 +335,7 @@ function verifySprite(img) {
 // the sprite box for the given pokemon.
 function setSprite(id) {
   // Dereference the sprite object for the pokemon
-  let sprite = document.getElementById(`pal-${id}-sprite`);
+  const sprite = document.getElementById(`pal-${id}-sprite`);
 
   // Get the species for the Pokemon with the given id, converted to lower case
   const speciesId = document.getElementById("pal-species-" + id).value;
@@ -358,18 +357,32 @@ function setSprite(id) {
     // Set the sprite source to the generated image name
     sprite.src = filename;
 
-    // If the sprite is verified successfully
-    if (verifySprite(speciesSprite)) {
-      // Script has worked as expected, return true
-      return true;
+    // Process the element sprite(s)
+    const elemSprite = document.getElementById(`element-${id}-sprite`);
+
+    // Clear the current sprites
+    elemSprite.innerHTML = ""; 
+
+    // Loop over the species elements
+    for (let element of speciesData.element)
+    {
+      // Generate the type icon string
+      const icon = `img/element/${element}_sm.png`;
+
+      // Create image property for element sprite
+      const img = document.createElement('img');
+      
+      // Set image icon / size
+      img.style["width"] = "24px";
+      img.src = icon;
+
+      // Add the sprite to the document
+      elemSprite.appendChild(img);
     }
   }
-
-  // False indicates sprite was not set properly
-  return false;
 }
 
-// Given a list of types, returns the defensive values
+// Given a list of elements, returns the defensive values
 // Which should be inserted into the display table.
 function getTableDefensive(elements) {
   // Generate default map
@@ -612,7 +625,7 @@ function update(id = null) {
   // Array of pal elements
   document.elementList = [];
 
-  // Array of active skill types
+  // Array of active skill elements
   document.activeSkillsList = [];
 
   // Iterate over all of the elements which start with 'pal-species-'
@@ -636,7 +649,7 @@ function update(id = null) {
 
         // Loop 'amount' times
         for (let i = 0; i < amount; i++) {
-          // Add the type combination to the list of types
+          // Add the type combination to the list of elements
           document.elementList.push(speciesData.element);
 
           // Add the pal skills to the list of skills
